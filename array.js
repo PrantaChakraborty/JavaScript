@@ -97,3 +97,8 @@ let sliced_arr = new_arr.slice(2)
 console.log(sliced_arr);
 let x = new_arr.slice(1, 2)
 console.log(x);
+
+// array soring
+const points = [40, 100, 1, 5, 25, 10];
+console.log(points.sort()); // for string
+console.log(points.sort(function(a, b){return a - b}));

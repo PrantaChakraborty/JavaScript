@@ -99,6 +99,18 @@ let x = new_arr.slice(1, 2)
 console.log(x);
 
 // array soring
-const points = [40, 100, 1, 5, 25, 10];
+let points = [40, 100, 1, 5, 25, 10];
 console.log(points.sort()); // for string
+
+// for number need to compare with next number
+/*
+If the result is negative, a is sorted before b.
+
+If the result is positive, b is sorted before a.
+
+If the result is 0, no changes are done with the sort order of the two values.
+*/
 console.log(points.sort(function(a, b){return a - b}));
+
+let rev = points.reverse()
+console.log(rev);

@@ -114,3 +114,62 @@ console.log(points.sort(function(a, b){return a - b}));
 
 let rev = points.reverse()
 console.log(rev);
+
+
+// array iteration
+// forEach
+const numbers = [1, 2, 3, 4, 5, 6]
+
+function myFunction(value=value, index=index, array){
+    console.log(value, index);
+}
+
+numbers.forEach(myFunction)
+
+// using map
+/*
+The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array.
+*/
+
+const arr2 = [1, 3, 4, 5, 6]
+
+const arr3 = arr2.map(func)
+function func(value){
+    return value *2
+}
+console.log(arr3);
+
+
+/*
+The filter() method creates a new array with array elements that pass a test.
+
+This example creates a new array from elements with a value larger than 18:
+*/
+
+const arr4 = [3, 4, 5, 6, 7]
+const over5 = arr4.filter(myFunc2)
+
+function myFunc2(value, index, array){
+    return value > 5
+}
+console.log(over5);
+
+// reduce
+//The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+const arr5 = [3, 2, 4, 5]
+const sum = arr5.reduce(myFunc3)
+ 
+function myFunc3(total, value){
+    return total + value;
+}
+console.log(sum);
+// reduce with initial value
+const sum_with_initial = arr5.reduce(myFunc4, 10)
+function myFunc4(total, value){
+    return total + value
+}
+console.log(sum_with_initial)
